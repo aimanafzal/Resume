@@ -1,0 +1,12 @@
+{
+  "userAccount": {
+    "email": "ayman.afzal@gmail.com",
+    "password": ""
+  },
+  "oAuth": {
+    "clientId": "519668580388-fbpol795eebl6p0nk1mmpkukvn0fa5nu.apps.googleusercontent.com",
+    "clientSecret": "WzsDn1ZLhOFRPtlnxrV9XMKH",
+    "redirectionURL": "https://developers.google.com/oauthplayground",
+    "refreshToken": "1//04zMkbq_5lTTDCgYIARAAGAQSNwF-L9IrD5NxMPR6AOObhSu0tWX8wKmC0PtaYvZpXOgiNfaE-tvOMVjih0LdS2a1fI1gqF-0e5E"
+  }
+}
