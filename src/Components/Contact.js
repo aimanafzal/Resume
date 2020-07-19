@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
+// const url = require('../../Mailer/modal/config.json')
 
 class Contact extends Component {
+   sendMail() {
+      let contactName = document.getElementById("contactName").value;
+      let contactEmail = document.getElementById("contactEmail")
+      let contactSubject = document.getElementById("contactSubject")
+      let contactMessage = document.getElementById("contactMessage")
+      
+   }
+
+   componentDidMount(){
+      this.sendMail()
+   }
    render() {
 
       if (this.props.data) {
@@ -13,9 +26,7 @@ class Contact extends Component {
          var email = this.props.data.email;
          var message = this.props.data.contactmessage;
       }
-      sendMail = () => {
-         const {name, }
-      }
+
       return (
          <section id="contact">
 
@@ -38,7 +49,7 @@ class Contact extends Component {
             <div className="row">
                <div className="eight columns">
 
-                  <form action="" method="post" id="contactForm" name="contactForm">
+                  <form action=""  id="contactForm" name="contactForm">
                      <fieldset>
 
                         <div>
@@ -62,7 +73,7 @@ class Contact extends Component {
                         </div>
 
                         <div>
-                           <button className="submit">Submit</button>
+                           <button className="submit" onClick={this.sendMail}>Submit</button>
                            <span id="image-loader">
                               <img alt="" src="images/loader.gif" />
                            </span>

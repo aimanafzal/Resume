@@ -1,3 +1,4 @@
 /node_modules
 /Mailer/node_modules
 /Mailer/modal/config.json
+/build
