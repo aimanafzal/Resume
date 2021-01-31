@@ -21,9 +21,9 @@ router.route('/test').get((req, res) => {
 
 router.route('/send_email').post(async (req, res) => {
     var _email = new email()
-    // _email.sendEMail(req.name, req.sender, req.subject,req.message,res)
+    _email.sendEMail(req.name, req.sender, req.subject,req.message,res)
     
-    _email.sendEmail(req, res)
+    
 
 })
 

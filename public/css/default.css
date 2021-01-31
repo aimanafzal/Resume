@@ -51,6 +51,7 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
    margin: 0;
    padding: 0;
+   padding-top: 1px;
    border: 0;
    outline: 0;
    font-size: 100%;
@@ -60,7 +61,7 @@ time, mark, audio, video {
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
-   display: block;
+   display: inherit;
 }
 
 audio,

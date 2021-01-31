@@ -30,6 +30,7 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
+   
    height: 800px;
    min-height: 500px;
    width: 100%;
@@ -48,6 +49,7 @@ header:before {
    height: 100%;
 }
 header .banner {
+   
    display: inline-block;
    vertical-align: middle;
    margin: 0 auto;
@@ -61,7 +63,7 @@ header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
    color: #fff;
    letter-spacing: -2px;
-   margin: 0 auto 18px auto;
+   margin: 50px auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
@@ -81,6 +83,7 @@ header .banner-text hr {
    border-color: #2F2D2E;
    border-color: rgba(150, 150, 150, .1);
 }
+
 
 /* header social links */
 header .social {
@@ -121,8 +124,8 @@ header .scrolldown a:hover { color: #11ABB0; }
 
 /* primary navigation
 --------------------------------------------------------------------- */
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
-	 margin: 0;
+#nav-wrap ul, #nav-wrap li, #nav-wrap a { 
+   margin: 0;
 	 padding: 0;
 	 border: none;
 	 outline: none;

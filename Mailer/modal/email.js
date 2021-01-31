@@ -18,7 +18,7 @@ class email {
             }
         })
     }
-    async sendEmail(req, res) {
+    async sendEmail(name, sender, subject,message,res) {
 
         const oauth2Client = new OAuth2({
             clientId: config.oAuth.clientId,
@@ -31,6 +31,7 @@ class email {
         const accessToken = oauth2Client.getAccessToken()
 
         const smtpTransport = nodemailer.createTransport({
+            pool:true,
             service: "gmail",
             auth: {
                 type: "OAuth2",
@@ -57,6 +58,7 @@ class email {
                 if (err) return err;
                 return info;
             });
+            smtpTransport.close();
         }
     }
 }

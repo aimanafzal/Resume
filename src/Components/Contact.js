@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 // import axios from 'axios';
 // const url = require('../../Mailer/modal/config.json')
 
@@ -73,7 +74,7 @@ class Contact extends Component {
                         </div>
 
                         <div>
-                           <button className="submit" onClick={this.sendMail}>Submit</button>
+                           <button className="submit" onClick={this.test_email}>Submit</button>
                            <span id="image-loader">
                               <img alt="" src="images/loader.gif" />
                            </span>
