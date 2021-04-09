@@ -137,18 +137,19 @@
 /*	contact form
 ------------------------------------------------------*/
 
-   // $('form#contactForm button.submit').click(function() {
+   $('form#contactForm button.submit').click(function() {
 
-   //    $('#image-loader').fadeIn();
+      $('#image-loader').fadeIn();
 
-   //    var contactName = $('#contactForm #contactName').val();
-   //    var contactEmail = $('#contactForm #contactEmail').val();
-   //    var contactSubject = $('#contactForm #contactSubject').val();
-   //    var contactMessage = $('#contactForm #contactMessage').val();
+      var contactName = $('#contactForm #contactName').val();
+      var contactEmail = $('#contactForm #contactEmail').val();
+      var contactSubject = $('#contactForm #contactSubject').val();
+      var contactMessage = $('#contactForm #contactMessage').val();
 
-   //    var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-   //             '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
+      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
+               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
 
+      console.table(data)
    //    $.ajax({
 
 	//       type: "POST",

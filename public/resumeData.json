@@ -64,9 +64,27 @@
     ],
     "work": [
       {
+        "company": "DECA Games",
+        "title": "Backend - FullStack Developer",
+        "years": "August 2020 - January 2021 ",
+        "description": [
+          "Responsible for Research, Analysis, Backend Development, Debugging, Testing and Team Management",
+          "Backend Development and API Development including setting up backend architecture which includes server management and deployment using (Git, Azure, Firebase)"
+        ]
+      },
+      {
+        "company": "HirePipu",
+        "title": "CoFounder | CTO",
+        "years": "October 2020 - January 2021 ",
+        "description": [
+          "Responsible for Research, Analysis, Backend Development, Debugging, Testing and Team Management",
+          "Backend Development and API Development including setting up backend architecture which includes server management and deployment using (Git, Azure, Firebase)"
+        ]
+      },
+      {
         "company": "Chain of Demand",
         "title": "Software Engineer",
-        "years": "September 2019 - Present",
+        "years": "September 2019 - August 2020",
         "description": [
           "Responsible for Research, Analysis, Backend Development, Debugging, Testing and Team Management",
           "Backend Development and API Development including setting up backend architecture which includes server management and deployment using (Git, Azure, Firebase)"
@@ -103,28 +121,53 @@
       }
     ],
     "skills": [
+      
       {
-        "name": "Git",
+        "name": "NodeJS",
         "level": "80%"
       },
       {
-        "name": "NodeJS",
-        "level": "90%"
+        "name": "Python",
+        "level": "80%"
       },
       {
-        "name": "ReactJs",
+        "name": "DevOps",
         "level": "70%"
       },
+      {
+        "name":"Data Pipeline",
+        "level": "80%"
+      },
+      {
+        "name": "Microservices",
+        "level": "90%"
+      },
+
+      {
+        "name": "ReactJs",
+        "level": "60%"
+      },
+
+      {
+        "name": "Django",
+        "level": "70%"
+      },
+
       {
         "name": "MongoDB",
         "level": "80%"
       },
       {
-        "name": "AWS (EC2, S3, Elastic IP)",
+        "name": "Blockchain",
+        "level": "70%"
+      },
+       
+      {
+        "name": "Git",
         "level": "80%"
       },
       {
-        "name": "Firebase Hosting",
+        "name": "Firebase ",
         "level": "80%"
       },
       {
@@ -132,36 +175,24 @@
         "level": "80%"
       },
       {
-        "name": "Blockchain",
-        "level": "70%"
-      },
-      {
-        "name": "Microservices",
-        "level": "80%"
-      },
-
-      {
         "name": "GraphQL",
         "level": "70%"
       },
-      {
-        "name": "Python",
-        "level": "70%"
-      },
-      {
-        "name": "Django",
-        "level": "70%"
-      },
+      
       {
         "name": "AWS EC2",
-        "level": "80%"
+        "level": "85%"
       },
       {
-        "name": "AWS S3",
+        "name": "AWS S3, AWS LAMBDA, AWS EC2, Apache",
         "level": "70%"
       },
       {
         "name": "Paypal",
+        "level": "70%"
+      },
+      {
+        "name": "Shopify",
         "level": "70%"
       }
     ]
@@ -195,6 +226,20 @@
           "Ayman according to me is a intelligent and hardworker kind of guy. He always showed great skills and knowledge when it comes to any challenging work or problem. Ayman has good coding skills which proves credibility towards programming. I wish him all the best in his future endeavors."
         ],
         "user": "Syed Shahzaib Ahmed - Software Engineer and Lead IT"
+      },
+
+      {
+        "text": [
+          "I have worked with Aiman for almost 3 years. As I know him, he is a very Honest, Dedicated, Passionate and Hard working developer. A great team player that holds together, supports and appreciates his team mates, no matter you are his junior or senior. Takes full responsibility of his work and put all his effort to make the best of it. I will definitely recommend him for Development or Lead positions."
+        ],
+        "user": "Abdul Moiz - Blockchain | Smart Contract | Nodejs Developer"
+      },
+
+      {
+        "text": [
+          "Ayman Afzal was the lead developer of a blockchain product team I was on. He was very industrious and timely on delivering results. He also had a broad base knowledge of coding languages. As a result, he came up with creative solutions to tough coding problems we encountered.  He is a team player who takes full responsibility for the end product, and I will highly recommend him for developer positions."
+        ],
+        "user": "Shay Charles Awogbile | New York based Strategist & Award Winning Designer"
       }
     ]
   }

@@ -2,20 +2,47 @@ import React, { Component } from 'react';
 
 // import axios from 'axios';
 // const url = require('../../Mailer/modal/config.json')
+// const [email, setEmail] = useState('')
+//          const [message, setMessage] = useState('')
+//          const [subject, setSubject] = useState('')
+//          const [contact, setContact] = useState('')
+//          const [name, setName] = useState('')
+
 
 class Contact extends Component {
-   sendMail() {
-      let contactName = document.getElementById("contactName").value;
-      let contactEmail = document.getElementById("contactEmail")
-      let contactSubject = document.getElementById("contactSubject")
-      let contactMessage = document.getElementById("contactMessage")
-      
-   }
+      state = 
+      {
+         message: '',
+         subject: '',
+         contactName: '', 
+         contactEmail: ''
+      }
+      submitRequest = async(e) => {   
+         e.preventDefault();
+         console.table(this.state)   
+         const response = await fetch("/sendMail", { 
+            method: 'POST', 
+            headers: { 
+               'Content-type': 'application/json'
+            }, 
+            body: JSON.stringify(
+               {
+                  message: this.state.message,
+                  subject: this.state.subject,
+                  contactEmail:this.state.contactEmail, 
+                  contactName: this.state.contactName
+               }) 
+         }); 
+         const resData = await response.json(); 
+         if (resData.status === 'success'){
+               alert("Message Sent."); 
+               this.resetForm()
+         }else if(resData.status === 'fail'){
+               alert("Message failed to send.")
+         }
+      }
 
-   componentDidMount(){
-      this.sendMail()
-   }
-   render() {
+   render = () => {
 
       if (this.props.data) {
          var name = this.props.data.name;
@@ -50,31 +77,31 @@ class Contact extends Component {
             <div className="row">
                <div className="eight columns">
 
-                  <form action=""  id="contactForm" name="contactForm">
+                  <form id="contactForm" name="contactForm" onSubmit={this.submitRequest}>
                      <fieldset>
 
                         <div>
                            <label htmlFor="contactName">Name <span className="required">*</span></label>
-                           <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange} />
+                           <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={e=> this.setState({contactName: e.target.value})} value = {this.state.contactName} />
                         </div>
 
                         <div>
                            <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-                           <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange} />
+                           <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={e=> this.setState({contactEmail: e.target.value}) } value = {this.state.contactEmail} />
                         </div>
 
                         <div>
                            <label htmlFor="contactSubject">Subject</label>
-                           <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange} />
+                           <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={e=> this.setState({subject: e.target.value}) } value = {this.state.subject} />
                         </div>
 
                         <div>
                            <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                           <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                           <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" onChange={e => this.setState({message: e.target.value}) } value = {this.state.message}></textarea>
                         </div>
 
                         <div>
-                           <button className="submit" onClick={this.test_email}>Submit</button>
+                           <button className="submit" type="submit">Submit</button>
                            <span id="image-loader">
                               <img alt="" src="images/loader.gif" />
                            </span>
@@ -128,5 +155,6 @@ class Contact extends Component {
       );
    }
 }
+
 
 export default Contact;
