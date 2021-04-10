@@ -432,16 +432,18 @@ ul#nav li.current a { color: #F06000; }
    letter-spacing: 1px;
    text-align: center;
    margin-bottom: 48px;
-   color: #95A3A3;
+   /* color: #95A3A3; */
+   color:black
 }
 
 /* Portfolio Content */
 #portfolio-wrapper .columns { margin-bottom: 36px; }
 .portfolio-item .item-wrap {
-   background: #fff;
+   /* background: #fff; */
+   background: white;
    overflow: hidden;
    position: relative;
-
+   
    -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -455,14 +457,15 @@ ul#nav li.current a { color: #F06000; }
 
 /* overlay */
 .portfolio-item .item-wrap .overlay {
-   position: absolute;
+   position: inherit;
+   /* position: absolute; */
    left: 0;
    top: 0;
    width: 100%;
    height: 100%;
 
-	opacity: 0;
-	-moz-opacity: 0;
+	/* opacity: 0;
+	-moz-opacity: 0; */
 	filter:alpha(opacity=0);
 
    -webkit-transition: opacity 0.3s ease-in-out;

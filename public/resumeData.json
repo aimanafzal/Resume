@@ -66,7 +66,7 @@
       {
         "company": "DECA Games",
         "title": "Backend - FullStack Developer",
-        "years": "August 2020 - January 2021 ",
+        "years": "August 2020 - Present",
         "description": [
           "Responsible for Research, Analysis, Backend Development, Debugging, Testing and Team Management",
           "Backend Development and API Development including setting up backend architecture which includes server management and deployment using (Git, Azure, Firebase)"
@@ -205,7 +205,54 @@
 
         "url": "http://fiddlernyc.com"
       }
-    ]
+    ],
+    "Achievement":[
+      {"Title": "Finalist | Hack Asia 2020"}
+    ],
+    "Certification":[
+      {
+      "title":"Reactive Architecture: Introduction to Reactive Systems",
+      "organization":"IBM",
+      "issueDate":"March - 2021",
+      "url": "https://courses.cognitiveclass.ai/certificates/7a3de512cb794abe8b8ba2890d9ab21d"
+    },
+    {
+      "title":"Serverless Computing using Cloud Functions",
+      "organization":"IBM",
+      "issueDate":"June - 2020",
+      "url": "https://courses.cognitiveclass.ai/certificates/ddbb903193be482283dc73b41e4fae5e"
+    },
+    {
+      "title":"Deep Learning Fundamentals",
+      "organization":"DeepLearning.TV",
+      "issueDate":"December - 2019",
+      "url": "https://courses.cognitiveclass.ai/certificates/3e073e24d0a444d29c9aa90ac7585c6d"
+    },
+    {
+      "title":"Deep Learning with TensorFlow",
+      "organization":"Cognitive Class",
+      "issueDate":"December - 2019",
+      "url": "https://courses.cognitiveclass.ai/certificates/3851334913894e3081c0b3baf730971f"
+    },
+    {
+      "title":"Bitcoin",
+      "organization":"IBM",
+      "issueDate":"February - 2019",
+      "url": "https://courses.cognitiveclass.ai/certificates/f6ba4bb79cbe46a88ecb8c607706cc06"
+    },
+    {
+      "title":"Blockchain Essentials",
+      "organization":"IBM",
+      "issueDate":"February - 2019",
+      "url": "https://courses.cognitiveclass.ai/certificates/3d69ca0c6e5349f0b9a0abba4e6e7716"
+    },
+    {
+      "title":"Build an IoT Blockchain Network for a Supply Chain",
+      "organization":"IBM",
+      "issueDate":"February - 2019",
+      "url": "https://courses.cognitiveclass.ai/certificates/16990d44305944fe80c57aaa50632f4b"
+    }
+  ]
   },
   "testimonials": {
     "testimonials": [
