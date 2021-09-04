@@ -2,3 +2,4 @@
 /Mailer/node_modules
 /Mailer/modal/config.json
 /build
+.env

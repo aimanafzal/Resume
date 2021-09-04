@@ -31,10 +31,10 @@ body { background: #0f0f0f; }
 header {
    position: relative;
    
-   height: 800px;
-   min-height: 500px;
+   height: 1000px;
+   min-height: 1000px;
    width: 100%;
-   background: #161415 url(../images/header-background.jpg) no-repeat top center;
+   background: #161415 url(../images/header-bg.jpg) no-repeat top center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    text-align: center;
@@ -61,14 +61,14 @@ header .banner {
 header .banner-text { width: 100%; }
 header .banner-text h1 {
    font: 90px/1.1em 'opensans-bold', sans-serif;
-   color: #fff;
+   color:white;
    letter-spacing: -2px;
    margin: 50px auto 18px auto;
    text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
 }
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
-   color: #A8A8A8;
+   color: #f7f3f3;
    margin: 0 auto;
    width: 70%;
    text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
@@ -648,7 +648,7 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #testimonials {
-   background: #1F1F1F url(../images/testimonials-bg.jpg) no-repeat center center;
+   background: #1F1F1F url(../images/testim.jpg) no-repeat center center;
    background-size: cover !important;
 	-webkit-background-size: cover !important;
    background-attachment: fixed;
@@ -797,14 +797,16 @@ call-to-action .button {
 /* ------------------------------------------------------------------ */
 
 #contact {
-   background: #191919;
-   padding-top: 96px;
-   padding-bottom: 102px;
-   color: #636363;
+   background:black;
+   padding-top: 68px;
+    padding-bottom: 83px;
+   color:#CCC;
+   
+   
 }
 #contact .section-head { margin-bottom: 42px; }
 
-#contact a, #contact a:visited  { color: #11ABB0; }
+#contact a, #contact a:visited  { color: gray; }
 #contact a:hover, #contact a:focus { color: #fff; }
 
 #contact h1 {
@@ -812,7 +814,7 @@ call-to-action .button {
    text-transform: uppercase;
    letter-spacing: 3px;
    color: #EBEEEE;
-   margin-bottom: 6px;
+   margin-bottom: 10px;
 }
 #contact h1 span { display: none; }
 #contact h1:before {
@@ -820,7 +822,7 @@ call-to-action .button {
    content: "\f0e0";
 	padding-right: 10px;
 	font-size: 72px;
-   line-height: 72px;
+   line-height: 80px;
    text-align: left;
    float: left;
    color: #ebeeee;
@@ -833,9 +835,9 @@ call-to-action .button {
 }
 #contact p.lead {
    font: 18px/36px 'opensans-light', sans-serif;
-   padding-right: 3%;
+   padding-right: 10%;
 }
-#contact .header-col { padding-top: 6px; }
+#contact .header-col { padding-top: 3px; }
 
 
 /* contact form */
@@ -852,20 +854,21 @@ call-to-action .button {
 #contact textarea,
 #contact select {
    padding: 18px 20px;
+   width: 74%;
 	color: #eee;
 	background: #373233;
-	margin-bottom: 42px;
-	border: 0;
+	margin-bottom: 10px;
+	border: 5px;
 	outline: none;
    font-size: 15px;
    line-height: 24px;
-   width: 65%;
+   
 }
 #contact input:focus,
 #contact textarea:focus,
 #contact select:focus {
 	color: #fff;
-	background-color: #11ABB0;
+	
 }
 #contact button.submit {
 	text-transform: uppercase;
@@ -878,6 +881,7 @@ call-to-action .button {
    display: inline-block;
 	border-radius: 3px;
    margin-left: 26%;
+   text-align: center;
 }
 #contact button.submit:hover {
 	color: #0D0D0D;

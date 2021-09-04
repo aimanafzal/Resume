@@ -1,132 +1,142 @@
-import React, { Component } from 'react';
-
-// import axios from 'axios';
+import React, { Component, useState } from 'react';
+import axios from 'axios';
 // const url = require('../../Mailer/modal/config.json')
 
-class Contact extends Component {
-   sendMail() {
-      let contactName = document.getElementById("contactName").value;
-      let contactEmail = document.getElementById("contactEmail")
-      let contactSubject = document.getElementById("contactSubject")
-      let contactMessage = document.getElementById("contactMessage")
+
+//import axios from 'axios';
+import { Form, Button } from 'react-bootstrap';
+
+const ContactForm = () => {
+  const [state, setState] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const [result, setResult] = useState(null);
+
+  const sendEmail = event => {
+    event.preventDefault();
+    axios
+      .post('http://localhost:4500/send', { ...state })
+      .then(response => {
+        setResult(response.data);
+        setState({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch(() => {
+        setResult({
+          success: false,
+          message: 'Something went wrong. Try again later'
+        });
+      });
+     
+  };
+
+  const onInputChange = event => {
+    const { name, value } = event.target;
+
+    setState({
+      ...state,
+      [name]: value
+    });
+  };
+
+  return (
+    <section id='contact'  >
+    
       
-   }
+      
+      
 
-   componentDidMount(){
-      this.sendMail()
-   }
-   render() {
+ <div className="row section-head">
 
-      if (this.props.data) {
-         var name = this.props.data.name;
-         var street = this.props.data.address.street;
-         var city = this.props.data.address.city;
-         var state = this.props.data.address.state;
-         var zip = this.props.data.address.zip;
-         var phone = this.props.data.phone;
-         var email = this.props.data.email;
-         var message = this.props.data.contactmessage;
-      }
+   <div className="two columns header-col">
 
-      return (
-         <section id="contact">
+      <h1>CONTACT ME</h1>
 
-            <div className="row section-head">
+   </div>
 
-               <div className="two columns header-col">
+   <div className="ten columns">
 
-                  <h1><span>Get In Touch.</span></h1>
-
-               </div>
-
-               <div className="ten columns">
-
-                  <p className="lead">{message}</p>
-
-               </div>
-
-            </div>
-
+   </div>
+      </div> 
+     
             <div className="row">
                <div className="eight columns">
+               {/* <div class="title">WELCOME</div>
+      <div class="subtitle">CONTACT ME</div> */}
 
-                  <form action=""  id="contactForm" name="contactForm">
-                     <fieldset>
+         
+      <form className='form' onSubmit={sendEmail}  name="contactForm" >
+        <Form.Group controlId="name">
+          <Form.Label>Full Name</Form.Label>
+          <Form.Control
+            type="text"
+            name="name"
+            value={state.name}
+            placeholder="Enter your full name"
+            onChange={onInputChange}
+            required
+           
+          />
+        </Form.Group >
+        <Form.Group controlId="email">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            type="text"
+            name="email"
+            value={state.email}
+            placeholder="Enter your email"
+            onChange={onInputChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="subject">
+          <Form.Label>Subject</Form.Label>
+          <Form.Control
+            type="text"
+            name="subject"
+            value={state.subject}
+            placeholder="Enter subject"
+            onChange={onInputChange}
+            required
+          />
+        </Form.Group>
+        <Form.Group controlId="subject">
+          <Form.Label>Message</Form.Label>
+          <Form.Control
+            as="textarea"
+            name="message"
+            value={state.message}
+            rows="5"
+            placeholder="Enter your message"
+            onChange={onInputChange}
+            required
+          />
+        </Form.Group>
+        <Button className="submit" variant="primary" type="submit">
+          Submit
+        </Button>
+      </form>
+      
+      </div>
+      </div>
+      <div>
+      {result && (
+        <p className={`${result.success ? 'success' : 'error'}`}>
+          {result.message}
+        </p>
+      )}</div>
+      </section>
+    
+   
+  );
+};
 
-                        <div>
-                           <label htmlFor="contactName">Name <span className="required">*</span></label>
-                           <input type="text" defaultValue="" size="35" id="contactName" name="contactName" onChange={this.handleChange} />
-                        </div>
-
-                        <div>
-                           <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-                           <input type="text" defaultValue="" size="35" id="contactEmail" name="contactEmail" onChange={this.handleChange} />
-                        </div>
-
-                        <div>
-                           <label htmlFor="contactSubject">Subject</label>
-                           <input type="text" defaultValue="" size="35" id="contactSubject" name="contactSubject" onChange={this.handleChange} />
-                        </div>
-
-                        <div>
-                           <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                           <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                        </div>
-
-                        <div>
-                           <button className="submit" onClick={this.test_email}>Submit</button>
-                           <span id="image-loader">
-                              <img alt="" src="images/loader.gif" />
-                           </span>
-                        </div>
-                     </fieldset>
-                  </form>
-
-                  <div id="message-warning"> Error boy</div>
-                  <div id="message-success">
-                     <i className="fa fa-check"></i>Your message was sent, thank you!<br />
-                  </div>
-               </div>
-
-
-               <aside className="four columns footer-widgets">
-                  <div className="widget widget_contact">
-
-                     <h4>Address and Phone</h4>
-                     <p className="address">
-                        {name}<br />
-                        {street} <br />
-                        {city}, {state} {zip}<br />
-                        <span>{phone}</span>
-                     </p>
-                  </div>
-
-                  {/* <div className="widget widget_tweets">
-                  <h4 className="widget-title">Latest Tweets</h4>
-                  <ul id="twitter">
-                     <li>
-                        <span>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">2 Days Ago</a></b>
-                     </li>
-                     <li>
-                        <span>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi
-                        <a href="#">http://t.co/CGIrdxIlI3</a>
-                        </span>
-                        <b><a href="#">3 Days Ago</a></b>
-                     </li>
-                  </ul>
-		         </div> */}
-               </aside>
-            </div>
-         </section>
-      );
-   }
-}
-
-export default Contact;
+export default ContactForm;
