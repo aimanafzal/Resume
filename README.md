@@ -1,3 +1,7 @@
-# React JS Resume Web App Template      
-![ReactJS Resume Website Template](resume-screenshot.jpg?raw=true "ReactJS Resume Website Template")
-### <a href="https://resume-e4d9d.web.app/">LIVE</a> 
+# React JS IS TECH LLC Web App     
+# How to run
+once the app is running you can open:
+
+http://localhost:3000
+
+on your browser.

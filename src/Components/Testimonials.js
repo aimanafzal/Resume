@@ -15,16 +15,23 @@ class Testimonials extends Component {
     }
 
     return (
-      <section id="testimonials">
+      
+      <section id="testimonials" className="bc">
+          
       <div className="text-container">
+     <img className="top"  src={require('./cx.png')} />
          <div className="row">
-
+         <div className="banner-text">
+       
+      {/* <h1 className="top">Why to choose us ?</h1> */}
+      </div>
             <div className="two columns header-col">
-               <h1><span>Client Testimonials</span></h1>
+               <h1><span>why to choose Us ?</span></h1>
             </div>
-
-            <div className="ten columns flex-container">
-                  <ul className="slides">
+            
+            <div className="eleven columns flex-container">
+           
+            <ul className="slides">
                       {testimonials}
                   </ul>
                </div>

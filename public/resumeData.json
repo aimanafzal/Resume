@@ -47,7 +47,8 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage": " We are US Based Company. We Provide Software Solutions, Software Consultancy on different tech stacks. Which are widely used and considered to be market leading tech. ",
+    
     "education": [
       {
         "school": "University?",
@@ -102,6 +103,23 @@
         ]
       }
     ],
+    "about":[ {
+      "aboutmsg":"We are currently working on following technologies",
+      "name": "Customer Satisfaction",
+      "level": "95%"
+    },{
+      
+        "name": "Development",
+        "level": "95%"
+      
+    }, {
+      "name": "Design",
+      "level": "90%"
+    },{
+      "name": "Marketing Strategy",
+      "level": "80%"
+    }]},
+    "skill":{
     "skills": [
       {
         "name": "Git",
@@ -180,22 +198,15 @@
     "testimonials": [
       {
         "text": [
-          "I Know Ayman Afzal from Past Couple of Years. He is Very Honest and Hardworking Professional.",
-          "It was Fun and Supportive to have him as in our Team. His Deliverables were on Time and he is get going type for taking up new Challenges and Tasks.",
-          "There has been Times when he came up with Solutions and Suggestions of various tools.",
-          "He is Always Ready to take Tasks and Help Others being a very good and Active Team Member.",
-          "I recommend him for Sr backend Programming Roles and Responsibilities.",
-          "He has a very Good Learning Curve for new Technologies, Languages and Good at analytics.",
-          "I wish him Great success for his Future endeavors"
-        ],
-        "user": "Uday Seethamsetty - Blockchain Senior Architect"
-      },
-      {
-        "text": [
-          "Ayman according to me is a intelligent and hardworker kind of guy. He always showed great skills and knowledge when it comes to any challenging work or problem. Ayman has good coding skills which proves credibility towards programming. I wish him all the best in his future endeavors."
-        ],
-        "user": "Syed Shahzaib Ahmed - Software Engineer and Lead IT"
+          "We take various aspects in mind while creating a custom information structure, such as confirmation and security. ",
+         "As a result, we built our data-connected platform with these similarities in mind, ensuring that you only have ",
+          "acccess to the most basic features. This frees us up to focus on the particular computations and data in your solution. ",
+           "As a consequence, we're prepared to deliver your arrangements quickly and effectively, with the added benefit of our ",
+          " ongoing assistance from day one."
+        ]
+        
       }
+      
     ]
   }
 }

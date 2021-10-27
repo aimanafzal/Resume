@@ -10,17 +10,17 @@ class Footer extends Component {
     }
 
     return (
-      <footer>
+      <footer >
 
-     <div className="row">
+     <div className="row" color="black" >
         <div className="twelve columns">
            <ul className="social-links">
               {networks}
            </ul>
 
            <ul className="copyright">
-              <li>&copy; Copyright 2020 Aiman Afzal</li>
-              <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+              <li>&copy; Copyright 2021 "IS TECH LLC."</li>
+              
            </ul>
 
         </div>
